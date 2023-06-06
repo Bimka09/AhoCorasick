@@ -2,18 +2,17 @@
 
 var patterns = new List<string>
 {
-    "A",
-    "AS",
-    "ARAB",
-    "BAR",
-    "BASS",
-    "C",
-    "CAR",
-    "RA",
-    "RAB"
+    "ABLE",
+    "CO",
+    "COPY",
+    "IG",
+    "PYR",
+    "RIGHT",
+    "TAB",
+    "TABLE"
 };
 
 var aho = new AhoCorasick(patterns);
-string text = "CARABASSBARABASS";
+string text = "COCOPYRIGHTABLE";
 var matches = aho.FindMatches(text);
 Console.WriteLine(String.Join(",", matches));
