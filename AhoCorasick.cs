@@ -55,9 +55,10 @@ namespace Aho_Corasick
             foreach(string pattern in Patterns)
             {
                 var node = Root;
-                string prefix = "";
+                var prefix = "";
                 foreach(char c in pattern)
                 {
+                    prefix += c;
                     if (!node.Childs.ContainsKey(c))
                         node.Childs[c] = new TrieNode(prefix);
                     node = node.Childs[c];
